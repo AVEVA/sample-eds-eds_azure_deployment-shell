@@ -10,6 +10,9 @@ sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
 echo "Device: Update..."
 sudo apt-get update
 
+echo "Device: Ensure Update..."
+sudo dpkg --configure -a
+
 echo "Device: Install the container runtime..."
 echo -e "y" | sudo apt-get install moby-engine
 
