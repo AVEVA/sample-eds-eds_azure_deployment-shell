@@ -13,6 +13,12 @@ sudo apt-get update
 echo "Device: Ensure Update..."
 sudo dpkg --configure -a
 
+echo "Device: Ensure Update2..."
+sudo apt --fix-broken install
+
+echo "Device: Ensure Update3..."
+sudo dpkg --configure -a
+
 echo "Device: Install the container runtime..."
 echo -e "y" | sudo apt-get install moby-engine
 
