@@ -3,6 +3,7 @@ set -e
 
 echo "Remote: Read settings from config.ini..."
 source <(grep = config.ini | tr -d "\r")
+cat config.ini
 
 echo "Remote: Creating IoT Edge device in IoT Hub..."
 az iot hub device-identity create --device-id $DeviceId --hub-name $HubName --edge-enabled
